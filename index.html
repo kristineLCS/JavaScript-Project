@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Plan your Holiday</title>
+    </head>
+    <body>
+        <!-- Add Planner List -->
+        <div class="container">
+            <div class="toPlan">
+                <h2>Let's Start Planning!</h2>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add a new plan...">
+                    <button id="add-plan-button" type="button">Add</button>
+                </div>
+                <p id="disclaimer">(click plan to cross out)</p>
+                <ul id="list-container"></ul>
+            </div>
+        </div>
+
+        <div class="hero">
+            <label for="input-file" id="drop-area">
+                <input type="file" accept="image/*" id="input-file" hidden>
+                <div id="img-view">
+                    <img src="upload_image_logo.png" alt="upload image">
+                    <p>Drag and Drop or Click here to upload image</p>
+                    <span>Upload any images from device</span>
+                </div>
+            </label>
+
+            <div class="hero-2">
+                <label for="input-file" id="drop-area">
+                    <input type="file" accept="image/*" id="input-file" hidden>
+                    <div id="img-view">
+                        <img src="upload_image_logo.png" alt="upload image">
+                        <p>Drag and Drop or Click here to upload image</p>
+                        <span>Upload any images from device</span>
+                    </div>
+                </label>
+            </div>
+
+            <div class="plus">
+                <!-- <button class="w3-button w3-xlarge w3-circle w3-black" type="button">+</button> -->
+                <button class="button add-image-button" type="button" >+</button>
+            </div>
+
+            <!-- <label for="files">Select multiple files</label>
+            <input type="file" id="files" multiple accept="imagw/jpeg, image/png, image/jpg">
+            <output id="result"></output> -->
+        </div>
+
+        <!-- <div class="plus-container">
+
+        </div> -->
+        <footer class="footerbox">
+            <p>Last updated: 24/05/24</p>
+            <p>Copyright &copy; 2024</p>
+        </footer>
+    <script src="script.js"></script>
+    </body>
+</html>
