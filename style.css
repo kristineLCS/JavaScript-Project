@@ -1,7 +1,7 @@
 /* Start of Grid */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) { */
     /* CSS rules for screens with a maximum width of 600px */
-    }
+    /* }
     
     * {
         box-sizing: border-box;
@@ -21,27 +21,27 @@
      }
     footer {
         grid-area: f;
-    }
+    } */
 
-#background {
+/* #background {
     display: grid;
     grid-template:
-    "n "
-    "h "
-    "m"        
+    "n"
+    "h"
     "a"
+    "m"        
     "f";
-}
+} */
 /* End of Grid */
 
 /* Start of Media Query */
-@media (min-width: 38em) {
+/* @media (min-width: 38em) {
     #background {
        grid-template:
      " n   n "
      " h   h "
-     " m   m "
-     " a   a "
+     " m   a "
+     " m   a "
      " f   f "
      / 50% 50%;
     }
@@ -49,8 +49,8 @@
  @media (min-width: 65em) {
     nav ul {
        display: flex;
-       flex-direction: row;
-       flex-wrap: nowrap;
+       flex-direction: column;
+       flex-wrap: wrap;
        }
     #background {
         grid-template:
@@ -65,24 +65,95 @@
     .hero {
      height: 50vh;
     }
-}
+} */
 /* End of Media Query */
 
 *{
     margin: 0;
     padding: 0;
+}
+html, body {
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(100deg, rgb(98, 192, 255), rgb(229, 246, 255));
+    margin: 0;
+}
+main{
+    /* flex: 80%; */
+    margin-left: 20px
+
+}
+nav{
+    width: 260px;
+    height: 100%;
+    margin-right: 10;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav li{
+    /* display: flex;
+    justify-content: flex-start; */
+    height: 50px;
+    padding: 0;
+}
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+nav a:hover {
+    background-color: rgb(194, 193, 193);
+}
+nav li:first-child{
+    margin-left: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* #background{
+    flex: 80%;
+    margin-left: 20px
+
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
-}
-body{
-    /* min-height: 100vh; */
-    background: linear-gradient(100deg, rgb(98, 192, 255), rgb(229, 246, 255));
-}
+} */
+
 .container {
     /* width: 500px; */
     /* min-height: 100vh; */
     /* background: linear-gradient(100deg, rgb(98, 192, 255), rgb(229, 246, 255)); */
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 /* plan bar */
@@ -124,7 +195,7 @@ input{
     background: transparent;
     padding: 10px;
 }
-button{
+#add-plan-button{
     border: none;
     outline: none;
     padding: 10px 30px;
@@ -137,7 +208,7 @@ button{
 #add-plan-button:hover {
     background: #c61717;
 }
-ul li{
+.planlist li{
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -145,7 +216,7 @@ ul li{
     cursor: pointer;
     position: relative;
 }
-ul li span{
+.planlist li span{
     position: absolute;
     right: 0;
     top: 5px;
@@ -156,6 +227,7 @@ ul li span{
     line-height: 30px;
     text-align: center;
     border-radius: 50px;
+
 }
 ul li span:hover{
     background: #edeef0a3;
@@ -174,16 +246,16 @@ ul li span:hover{
     left: 8px;
 } */
 ul li.checked{
-    color: #2f3058;
+    color: #565663;
     text-decoration: line-through;
     
 }
 
 /* Drag and drop mage */
-.hero {
+/* .hero { */
     /* margin-bottom: 40px;
     margin-right: 40px; */
-    margin-top: 300px;
+    /* margin-top: 300px;
     margin-left: 60px;
     margin-bottom: 50px;
     display: flex;
@@ -191,10 +263,10 @@ ul li.checked{
     justify-content: flex-start;
 
 }
-.hero-2 {
+.hero-2 { */
     /* margin-bottom: 40px;
     margin-right: 40px; */
-    margin-top: 0;
+    /* margin-top: 0;
     margin-left: 20px;
     display: flex;
     align-items: center;
@@ -232,32 +304,94 @@ ul li.checked{
     font-size: 12px;
     color: #777;
     margin-top: 15px;
+} */
+
+
+/* try out */
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* should be in main */
+#box-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+#add-box-button {
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    border: none;
+    outline: none;
+    background: #fefefe;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    /* width: 20px;
+    height: 10px; */
+}
+.drop-area {
+    border: 2px dashed #c1c1c1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px;
+    width: 280px;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.drop-area img {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
-/* Add more images */
-.add-image-button {
-    border-radius: 50%;
-    width: 40px;
-    font-size: x-large;
+.drop-area p {
+    font-size: 15px;
+}
+.drop-area span {
+    font-size: 12px;
+}
+input[type="file"] {
+    display: none;
+}
+.close-button {
+    /* display: flex;
+    justify-content: flex-end; */
+    position: absolute;
     cursor: pointer;
-    background: #fb1d1d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    right: 6px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50px;
+    color: #000000;
+    font-weight: bolder;
+    line-height: 20px;
 }
-.add-image-button:hover{
-    background: #c61717;
-    
+.close-button:hover{
+    background: #b4b5b5a3;
 }
-.plus{
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 100px;
-}
+
+
 
 /* Footer */
-footer {
+/* footer {
     font-family: helvetica, sans-serif, 'times new roman';
     font-size: small;
     color: black;
@@ -268,6 +402,11 @@ footer {
 }
 
 .footerbox {
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: baseline;
+} */
