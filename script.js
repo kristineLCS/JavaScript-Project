@@ -1,3 +1,14 @@
+// Nav/Side Bar
+function closeSidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';  
+}
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';   
+}
+
+
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const addPlanButton = document.getElementById("add-plan-button");
@@ -9,15 +20,14 @@ function addPlan() {
     //     container.innerHTML = '<input type="text" id="input-box" placeholder="Add a new plan...">';
     // }
 
-    const list = document.createElement('li');
-    list.innerHTML = inputBox.value;
-    listContainer.appendChild(list);
-    list.setAttribute('class', 'planlist');
+    const li = document.createElement('li');
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
 
     // the delete button
     const span = document.createElement('span');
     span.innerHTML = "\u00d7";
-    list.appendChild(span);
+    li.appendChild(span);
 
     inputBox.value = "";
     saveData()
