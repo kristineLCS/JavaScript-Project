@@ -83,41 +83,50 @@ main{
     margin-left: 20px
 
 }
-nav{
+/* nav {
     width: 260px;
     height: 100%;
     margin-right: 10;
     background-color: rgb(255, 255, 255);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 
+} */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 40px;
+    left: 0;
+    
 }
 nav ul{
     width: 100%;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-
+    
 }
 nav li{
     /* display: flex;
     justify-content: flex-start; */
-    height: 50px;
+    height: 30px;
     padding: 0;
+    margin-right: 0;
 }
 nav a {
     height: 100%;
-    padding: 0 30px;
+    padding: 0 10px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: #000000;
 }
 nav a:hover {
-    background-color: rgb(194, 193, 193);
+    background-color: rgb(237, 236, 236);
 }
-nav li:first-child{
-    margin-left: auto;
+.navbar li:first-child{
+    margin-right: auto;
 }
 .sidebar{
     position: fixed;
@@ -126,12 +135,24 @@ nav li:first-child{
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: #fff;
+    background-color: rgba(212, 223, 250, 0.60);
+    backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+#close-sidebar-btn{
+    margin-left: 150px;
+}
+.sidebar a{
+    width: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* #background{
@@ -208,7 +229,8 @@ input{
 #add-plan-button:hover {
     background: #c61717;
 }
-.planlist li{
+ul li{
+    /* list-style: decimal; */
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -216,7 +238,7 @@ input{
     cursor: pointer;
     position: relative;
 }
-.planlist li span{
+ul li span{
     position: absolute;
     right: 0;
     top: 5px;
@@ -227,7 +249,7 @@ input{
     line-height: 30px;
     text-align: center;
     border-radius: 50px;
-
+    cursor: pointer;
 }
 ul li span:hover{
     background: #edeef0a3;
