@@ -8,14 +8,15 @@
     </head>
     <body>
         <div id="background">
-            <nav class="sidebar">
-                <ul>
-                    <li><a href="#"  >button</a></li>
-                    <li><a href="#"  >New Plan</a></li>
+            <nav>
+                <ul class="sidebar">
+                    <li onclick="closeSidebar()" id="close-sidebar-btn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                    <li><a href="#">New Plan</a></li>
                 </ul>
-                <ul>
-                    <li><a href="#"  >button</a></li>
-                    <li><a href="#"  >New Plan</a></li>
+                <ul class="navbar">
+                    <!-- <li><a href="#">button</a></li>
+                    <li><a href="#">New Plan</a></li> -->
+                    <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
                 </ul>
             </nav>
 
