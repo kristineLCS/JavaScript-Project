@@ -9,15 +9,23 @@
     <body>
         <div id="background">
             <nav>
-                <ul class="sidebar">
-                    <li onclick="closeSidebar()" id="close-sidebar-btn"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                    <li><a href="#">New Plan</a></li>
-                </ul>
-                <ul class="navbar">
-                    <!-- <li><a href="#">button</a></li>
-                    <li><a href="#">New Plan</a></li> -->
-                    <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-                </ul>
+                <div class="sidebar">
+                    <button type="button" id="hidesidebar"><img src="close-sidebar-btn.png" alt="close button 'X'" height="24px" width="24px"></button>
+                    <button type="button" id="sb-Plan-Button">New Plan<img src="addplan-sidebar-btn.png" alt="plus sign" height="23px" width="23px"></button>
+                    <!-- <button type="button" id="deletebtn"><img src="delete-btn.png" alt="bin icon" height="20px" width="20px"></button> -->
+                    <ul class="memoryplans">
+                        <li>
+                            <input type="text" id="title-input" placeholder="Title...">
+                            <button type="button" id="enterbtn"><img src="enter-btn.png" alt="check icon" height="22px" width="22px"></button>
+                            <button type="button" id="editbtn"><img src="edit-title-btn.png" alt="edit icon" height="20px" width="20px"></button>
+                            <button type="button" id="deletebtn"><img src="delete-btn.png" alt="bin icon" height="20px" width="20px"></button>
+                        </li>
+                    </ul>
+                    <ul id="sb-plan-container"></ul>
+                </div>
+                <div class="navbar">
+                    <button type="button" id="showsidebar"><img src="show-sidebar-btn.png" alt="sidebar button" height="24px" width="24px"></button>
+                </div>
             </nav>
 
             <main>
@@ -34,12 +42,15 @@
                     </div>
                 </div>
                 <div id="box-container"></div>
+                <div class="button-container">
+                    <button id="add-box-button" type="button">Add Drag and Drop Box</button>
+                </div>
             </main>
 
             <aside>
-                    <div class="button-container">
+                    <!-- <div class="button-container">
                         <button id="add-box-button" type="button">Add Drag and Drop Box</button>
-                    </div>
+                    </div> -->
             </aside>
                 <!-- <footer class="footerbox">
                     <p>Last updated: 24/05/24</p>
