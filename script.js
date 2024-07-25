@@ -1,19 +1,24 @@
-// Nav/Side Bar
-function closeSidebar(){
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'none';  
+// Show/Hide Sidebar
+const showSidebar = document.getElementById('showsidebar');
+const hideSidebar = document.getElementById('hidesidebar');
+const sideBar = document.querySelector('.sidebar');
+
+showSidebar.addEventListener('click', showSidebarBtn);
+function showSidebarBtn() {
+    sideBar.style.display = 'flex';
 }
-function showSidebar(){
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.style.display = 'flex';   
+
+hideSidebar.addEventListener('click', hideSidebarBtn);
+function hideSidebarBtn() {
+    sideBar.style.display = 'none';
 }
 
 
+// adding new plans
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const addPlanButton = document.getElementById("add-plan-button");
 
-// adding new plans
 addPlanButton.addEventListener('click', addPlan);
 function addPlan() {
     // if(inputBox.value === " "){
@@ -32,6 +37,35 @@ function addPlan() {
     inputBox.value = "";
     saveData()
 }
+
+// sidebar new plan button
+const sbPlanButton = document.getElementById('sb-Plan-Button');
+const memoryPlans = document.querySelector('.memoryplans')
+const sbPlanContainer = document.getElementById('sb-plan-container');
+
+// create new li and add that new li to sbplancontainer
+sbPlanButton.addEventListener('click', sbPlanBtn);
+function sbPlanBtn() {
+    const sbPlanList = document.createElement('li');
+
+    const titleBar = document.createElement('input');
+    titleBar.type = 'text';
+    titleBar.placeholder = 'Title...';
+
+    const enterButton = document.createElement('button');
+    enterButton.type = 'button';
+    enterButton.innerHTML = 'URL{$'
+
+    const editButton = document.createElement('button');
+    const deleteButton = document.createElement('button');
+
+
+    sbPlanList.appendChild(memoryPlans);
+    sbPlanContainer.appendChild(sbPlanList);
+
+
+}
+
 
 
 // crossing out and deleting completed plan
