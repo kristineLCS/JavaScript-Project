@@ -92,15 +92,15 @@ main{
 
 } */
 nav {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-start; */
     height: 40px;
     left: 0;
     
 }
-nav ul{
-    width: 100%;
+/* nav ul{
+    width: 30px;
     list-style: none;
     display: flex;
     justify-content: flex-start;
@@ -108,13 +108,11 @@ nav ul{
     
 }
 nav li{
-    /* display: flex;
-    justify-content: flex-start; */
     height: 30px;
     padding: 0;
     margin-right: 0;
-}
-nav a {
+} */
+/* nav a {
     height: 100%;
     padding: 0 10px;
     text-decoration: none;
@@ -127,7 +125,7 @@ nav a:hover {
 }
 .navbar li:first-child{
     margin-right: auto;
-}
+} */
 .sidebar{
     position: fixed;
     top: 0;
@@ -143,16 +141,153 @@ nav a:hover {
     align-items: flex-start;
     justify-content: flex-start;
 }
-.sidebar li{
-    width: 100%;
+/* #deletebtn{
+    margin-top: 60px;
+    margin-left: 5px;
+    width: 30px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    background-color:  #f8faffd4;
+    
 }
-#close-sidebar-btn{
-    margin-left: 150px;
-}
-.sidebar a{
-    width: 20px;
+#deletebtn:hover{
+    background-color: #dfdfdf;
+    border-radius: 10px;
+} */
+#hidesidebar {
+    position: absolute;
+    right: 20px;
+    margin-top: 15px;
+    background-color: #edeef0d4;
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    border: none;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+}
+#hidesidebar img:hover {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+#showsidebar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    color: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+#showsidebar button{
+    list-style-type: none;
+}
+#sb-Plan-Button {
+    /* margin-right: 30px; */
+    margin-left: 15px;
+    margin-top: 60px;
+    width: 215px;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8faffd4;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* #sb-Plan-Button img{
+    position: absolute;
+    right: 95px;
+} */
+#sb-Plan-Button:hover{
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+/* .memoryplans button {
+    margin-right: 5px;
+    margin-left: 13px;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8faffd4;
+    font-size: 15px;
+    cursor: pointer;
+} */
+#title-input {
+    /* margin-right: 5px; */
+    position: absolute;
+    top: 22px;
+    left: 16px;
+    width: 138px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8faffd4;
+    font-size: 15px;
+    text-align: center;
+}
+#enterbtn {
+    position: absolute;
+    top: 22px;
+    left: 120px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    /* background-color: #f8faffd4; */
+    font-size: 15px;
+    cursor: pointer;
+}
+#enterbtn:hover {
+    background-color:  #dfdfdf;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+}
+#editbtn {
+    position: absolute;
+    top: 22px;
+    left: 160px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8faffd4;
+    font-size: 15px;
+    cursor: pointer;
+}
+#editbtn:hover {
+    background-color:  #dfdfdf;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+}
+#deletebtn {
+    position: absolute;
+    top: 22px;
+    left: 200px;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f8faffd4;
+    font-size: 15px;
+    cursor: pointer;
+}
+#deletebtn:hover {
+    background-color:  #dfdfdf;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
 }
 
 /* #background{
@@ -163,6 +298,7 @@ nav a:hover {
 
 /* *{
     margin: 0;
+
     padding: 0;
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
@@ -209,7 +345,7 @@ nav a:hover {
     margin-top: 25px;
     margin-bottom: 5px;
 }
-input{
+#input-box{
     flex: 1;
     border: none;
     outline: none;
@@ -233,7 +369,7 @@ ul li{
     /* list-style: decimal; */
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 8px 12px 20px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -255,18 +391,6 @@ ul li span:hover{
     background: #edeef0a3;
 }
 
-/* ul li::before{
-    content: ' ';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-} */
 ul li.checked{
     color: #565663;
     text-decoration: line-through;
@@ -330,13 +454,13 @@ ul li.checked{
 
 
 /* try out */
-aside {
+/* aside {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 /* should be in main */
 #box-container {
     display: flex;
@@ -358,6 +482,8 @@ aside {
     border-radius: 10px;
     /* width: 20px;
     height: 10px; */
+    position: absolute;
+    right: 20px;
 }
 .drop-area {
     border: 2px dashed #c1c1c1;
