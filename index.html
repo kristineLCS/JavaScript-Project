@@ -3,60 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Plan your Holiday</title>
+        <link rel="stylesheet" href="home.css">
+        <title>Bucket List</title>
     </head>
     <body>
         <div id="background">
             <nav>
-                <div class="sidebar">
-                    <button type="button" id="hidesidebar"><img src="close-sidebar-btn.png" alt="close button 'X'" height="24px" width="24px"></button>
-                    <button type="button" id="sb-Plan-Button">New Plan<img src="addplan-sidebar-btn.png" alt="plus sign" height="23px" width="23px"></button>
-                    <!-- <button type="button" id="deletebtn"><img src="delete-btn.png" alt="bin icon" height="20px" width="20px"></button> -->
-                    <ul class="memoryplans">
-                        <li>
-                            <input type="text" id="title-input" placeholder="Title...">
-                            <button type="button" id="enterbtn"><img src="enter-btn.png" alt="check icon" height="22px" width="22px"></button>
-                            <button type="button" id="editbtn"><img src="edit-title-btn.png" alt="edit icon" height="20px" width="20px"></button>
-                            <button type="button" id="deletebtn"><img src="delete-btn.png" alt="bin icon" height="20px" width="20px"></button>
-                        </li>
-                    </ul>
-                    <ul id="sb-plan-container"></ul>
-                </div>
-                <div class="navbar">
-                    <button type="button" id="showsidebar"><img src="show-sidebar-btn.png" alt="sidebar button" height="24px" width="24px"></button>
-                </div>
+                <ul>
+                    <li class="header"><img class="hero" alt="'bucket list' illustration" src="bucket-list-2.PNG" width="150px" height="40px"></li>
+                    <li class="home"><a href="index.html" >Home</a></li>
+                    <li class="list"><a href="PlanPage.html">List</a></li>
+
+                </ul>
             </nav>
 
             <main>
-                <!-- Add Planner List -->
-                <div class="container">
-                    <div class="toPlan">
-                        <h2>Let's Start Planning!</h2>
-                        <div class="row">
-                            <input type="text" id="input-box" placeholder="Add a new plan...">
-                            <button id="add-plan-button" type="button">Add</button>
-                        </div>
-                        <p id="disclaimer">(click plan to cross out)</p>
-                        <ul id="list-container"></ul>
-                    </div>
-                </div>
-                <div id="box-container"></div>
-                <div class="button-container">
-                    <button id="add-box-button" type="button">Add Drag and Drop Box</button>
-                </div>
             </main>
 
             <aside>
-                    <!-- <div class="button-container">
-                        <button id="add-box-button" type="button">Add Drag and Drop Box</button>
-                    </div> -->
+                <div class="formcontainer">
+                    <form id="login">
+                        <h3>Log in</h3>
+                        <input type="text" id="email-input" name="email" placeholder="Enter email">
+                        <input type="text" id="password-input" name="password" placeholder="Enter password">
+                        <button type="submit" id="loginbutton">Log in</button>
+
+                    </form>
+                </div>
             </aside>
-                <!-- <footer class="footerbox">
-                    <p>Last updated: 24/05/24</p>
-                    <p>Copyright &copy; 2024</p>
-                </footer> -->
-            <script src="script.js"></script>
         </div>
+
+        <footer class="footerbox">
+            <p>Last updated: 05/08/24</p>
+            <p>Copyright &copy; 2024</p>
+        </footer>
+
+        <script src="home.js"></script>
     </body>
 </html>
