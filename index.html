@@ -16,27 +16,43 @@
 
                 </ul>
             </nav>
+            <header id="heroimage">
+                <div id="hero-content">
+                    <div id="wrapper">
+                        <div class="container">
+                            <img class="home-img" src="home-image.png" alt="bucket list drawings" width="1650px" height="825px">
+                        </div>
+                    </div>
+                </div>
+            </header>
 
             <main>
+                <h2>Keep note of your desires and wishes, and keep memories as you go through your bucket list</h2>
+                <p></p>
             </main>
 
             <aside>
+                <!-- subscribe to our newletter to get updates about our new features that will enhance your experience with Bucket list -->
                 <div class="formcontainer">
-                    <form id="login">
-                        <h3>Log in</h3>
+                    <form id="signup">
+                        <h3>Sign up to our daily newletter</h3>
+                        <p id="newsletter">Get updates about our new features that will enhance your experience with Bucket list!</p>
                         <input type="text" id="email-input" name="email" placeholder="Enter email">
-                        <input type="text" id="password-input" name="password" placeholder="Enter password">
-                        <button type="submit" id="loginbutton">Log in</button>
+                        <input type="password" id="password-input" name="password" placeholder="Enter password">
+                        <input type="checkbox" id="passcheckbox">
+                        <p id="viewpass">click to view password</p>
+                        <button type="submit" id="signupbutton">Sign up</button>
 
                     </form>
                 </div>
+                <!-- event.preventdefault, graphical element: that chages the structure of the page -->
             </aside>
-        </div>
 
-        <footer class="footerbox">
-            <p>Last updated: 05/08/24</p>
-            <p>Copyright &copy; 2024</p>
-        </footer>
+            <footer class="footerbox">
+                <p>Last updated: 05/08/24</p>
+                <p>Copyright &copy; 2024</p>
+            </footer>
+        </div>
 
         <script src="home.js"></script>
     </body>
