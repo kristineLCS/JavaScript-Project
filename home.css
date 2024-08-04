@@ -18,9 +18,9 @@
     main {
         grid-area: m;
     }
-    aside {
+    /* aside {
         grid-area: a;
-    }
+    } */
     footer {
         grid-area: f;
     }
@@ -31,7 +31,7 @@
     "n "
     "h "
     "m"   
-    "a"     
+    /* "a"      */
     "f";
 }
 /* End of Grid */
@@ -43,7 +43,7 @@
      " n   n "
      " h   h "
      " m   m "
-     " a   a "
+     /* " a   a " */
      " f   f "
      / 50% 50%;
     }
@@ -51,7 +51,7 @@
  @media (min-width: 65em) {
     nav ul {
        display: flex;
-       flex-direction: row;
+       flex-direction: column;
        flex-wrap: nowrap;
        }
     #background {
@@ -59,7 +59,7 @@
        " n   n   n"
        " h   h   h"
        " m   m   m"
-       " a   a   a"
+       /* " a   a   a" */
        " f   f   f"
        / 1fr 1fr 1fr;
        }
@@ -76,49 +76,51 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    /* background-repeat: no-repeat; */
 }
 #background {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(144, 210, 253);
     padding: 0;
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    /* background-repeat: no-repeat; */
-}
-#hero-content {
-    margin-top: 50px;
-    /* margin-bottom: 20px; */
-    /* display: flex;
-    align-self: center;    
-    justify-content: center; */
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    /* padding: 40px; */
-}
-/* #wrapper {
-    width: 100%;
-    overflow: hidden;
-} */
-#container {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-/* .banner-img {
-    width: 100%;
-} */
-.home-img {
     display: flex;
     justify-content: center;
-    align-self: center;
+    flex-direction: column;
+}
+.header {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+/* #hero-content {
+    margin-top: 50px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+} */
+.hero-container {
+    /* width: 60%;
+    height: 60%; */
+    margin-right: 20px;
+}
+.home-img {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    /* margin-left: 20px; */
+    width: 80%;
+    height: 80%;
 }
 main {
     margin-top: 90px;
+    margin-bottom: 50px;
+
+    /* forces the footer to stay at the bottom of the page */
+    flex: 1;
+
 }
 h2{
     font-family: "Bebas Neue", helvetica, arial;
@@ -142,35 +144,82 @@ button {
 /* Navigation */
 nav {
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-top: 20px; */
+    margin-bottom: 10px;
 }
 nav a:active {
     color: rgb(177, 13, 13)
 }
-.list {
-    list-style-type: none;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    color: rgb(0, 0, 0);
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .home {
     list-style-type: none;
     position: absolute;
-    top: 50px;
-    right: 120px;
+    top: 70px;
+    right: 140px;
     color: rgb(0, 0, 0);
 }
-.header {
+.list {
     list-style-type: none;
-    /* font-family: Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    color: rgb(2, 2, 92); */
+    position: absolute;
+    top: 120px;
+    right: 150px;
+    color: rgb(0, 0, 0);
+}
+.contact {
+    list-style-type: none;
+    position: absolute;
+    top: 170px;
+    right: 132px;
+    color: rgb(0, 0, 0);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    background-color: rgba(212, 223, 250, 0.60);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+#hidesidebar {
+    position: absolute;
+    right: 20px;
+    margin-top: 15px;
+    background-color: #edeef000;
+    width: 24px;
+    height: 24px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+#hidesidebar img:hover {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+#showsidebar {
     position: absolute;
     top: 40px;
-    left: 50px;  
+    left: 40px;
+    color: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+#showsidebar button{
+    list-style-type: none;
 }
 nav a {
     text-decoration: none;
@@ -189,15 +238,100 @@ nav a:hover {
 nav a:visited {
     color: #3c2400;
 }
+/* Navigation */
 
-
-aside{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 10px;
+/* Main */
+.gallery {
+    display: none;
 }
+.gallery img{
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.next:hover {
+    background-color: #c1c1c1;
+}
+.previous {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.previous:hover {
+    background-color: #c1c1c1;
+}
+.text {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.381);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 28px;
+  width: 100%;
+  text-align: center;
+}
+.number {
+    position: absolute;
+    top: 0;
+    color: #000000;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+.span {
+    text-align: center;
+    margin-top: 10px;
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #d4d1d1;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+    .previous, .next,.text {font-size: 11px}
+}
+
+  
+/* Main */
 h3{
     color: rgb(253, 36, 36);
     margin-bottom: 10px;
@@ -205,12 +339,14 @@ h3{
     font-size: 30px;
 }
 .formcontainer {
+    /* background-image: url(home-image.png); */
     display: flex;
     justify-content: center;
     align-items: center;
     /* margin-right: 50px; */
     margin-bottom: 80px;
-    margin-top: 20px;
+    margin-top: 50px;
+    /* margin-left: 150px; */
 
 }
 #signup {
@@ -218,6 +354,10 @@ h3{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.614);
+    padding: 100px 50px; */
     /* margin-right: 50px; */
 }
 #email-input {
@@ -225,12 +365,12 @@ h3{
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    border-style: none;
+    /* border-style: 1px solid rgb(0, 0, 0); */
     border-radius: 10px;
     width: 200px;
     height: 25px;
 }
-#password-input {
+/* #password-input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,12 +379,12 @@ h3{
     border-radius: 10px;
     width: 200px;
     height: 25px;
-}
+} */
 #signupbutton {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-style: none;
+    /* border-style: 1px solid rgb(0, 0, 0); */
     border-radius: 10px;
     width: 60px;
     height: 25px;
@@ -253,11 +393,11 @@ h3{
 #signupbutton:hover {
     background-color: #c1c1c1;
 }
-#passcheckbox {
+/* #passcheckbox {
     display: flex;
     justify-content: center;
     align-self: center;
-}
+} */
 #newsletter {
     display: flex;
     justify-content: center;
@@ -265,13 +405,15 @@ h3{
     font-size: 15px;
     margin-bottom: 30px;
 }
-#viewpass {
+/* #viewpass {
     font-size: 12px;
     display: flex;
     justify-content: center;
     align-self: center;
     margin-bottom: 15px;
-}
+} */
+/* Aside */
+
 
 /* Footer */
 footer {

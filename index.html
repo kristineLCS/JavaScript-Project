@@ -11,42 +11,100 @@
             <nav>
                 <ul>
                     <li class="header"><img class="hero" alt="'bucket list' illustration" src="bucket-list-2.PNG" width="150px" height="40px"></li>
-                    <li class="home"><a href="index.html" >Home</a></li>
-                    <li class="list"><a href="PlanPage.html">List</a></li>
-
                 </ul>
+                <div class="sidebar" id="mysidebar">
+                    <button type="button" id="hidesidebar"><img src="close-sidebar-btn.png" alt="close button 'X'" height="24px" width="24px"></button>
+                    <ul class="nav-ul">
+                        <li class="home"><a href="index.html" >Home</a></li>
+                        <li class="list"><a href="PlanPage.html">List</a></li>
+                        <li class="contact"><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
             <header id="heroimage">
-                <div id="hero-content">
+                <!-- <div id="hero-content">
                     <div id="wrapper">
                         <div class="container">
                             <img class="home-img" src="home-image.png" alt="bucket list drawings" width="1650px" height="825px">
                         </div>
                     </div>
+                </div> -->
+                <div class="container">
+
+                    <div class="gallery fade">
+                      <div class="number">1 / 8</div>
+                      <img src="1.PNG" alt="bungee jumping" width="100%">
+                      <div class="text">Bungee Jumping complete &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">2 / 8</div>
+                        <img src="2.PNG" alt="getting a tattoo" width="100%">
+                        <div class="text">Tattoo &check;</div>
+
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">3 / 8</div>
+                        <img src="3.PNG" alt="skydiving" width="100%">
+                        <div class="text">Skydiving was AMAZING &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">4 / 8</div>
+                        <img src="4.PNG" alt="marathon" width="100%">
+                        <div class="text">Exhausting but worth it &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">5 / 8</div>
+                        <img src="5.PNG" alt="concert" width="100%">
+                        <div class="text">SO FUN &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">6 / 8</div>
+                        <img src="6.PNG" alt="house sold" width="100%">
+                        <div class="text">Dream come true &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">7 / 8</div>
+                        <img src="7.PNG" alt="ballet" width="100%">
+                        <div class="text">Such an amazing experience &check;</div>
+                    </div>
+
+                    <div class="gallery fade">
+                        <div class="number">8 / 8</div>
+                        <img src="8.PNG" alt="racing" width="100%">
+                        <div class="text">I need to go back! &check;</div>
+                    </div>
+
+                    <a class="previous" onclick="buttons(-1)"><img src="left-arrow.png" alt="left arrow'" height="24px" width="24px"></a>
+                    <a class="next" onclick="buttons(1)"><img src="right-arrow.png" alt="right arrow'" height="24px" width="24px"></a>
+
+
+                    <div class="span">
+                        <span class="dot" onclick="currentImage(1)"></span>
+                        <span class="dot" onclick="currentImage(2)"></span>
+                        <span class="dot" onclick="currentImage(3)"></span>
+                        <span class="dot" onclick="currentImage(4)"></span>
+                        <span class="dot" onclick="currentImage(5)"></span>
+                        <span class="dot" onclick="currentImage(6)"></span>
+                        <span class="dot" onclick="currentImage(7)"></span>
+                        <span class="dot" onclick="currentImage(8)"></span>
+
+                    </div>
                 </div>
             </header>
 
             <main>
+                <div class="navbar">
+                    <button type="button" id="showsidebar"><img src="show-sidebar-btn.png" alt="sidebar button" height="24px" width="24px"></button>
+                </div>
                 <h2>Keep note of your desires and wishes, and keep memories as you go through your bucket list</h2>
                 <p></p>
             </main>
-
-            <aside>
-                <!-- subscribe to our newletter to get updates about our new features that will enhance your experience with Bucket list -->
-                <div class="formcontainer">
-                    <form id="signup">
-                        <h3>Sign up to our daily newletter</h3>
-                        <p id="newsletter">Get updates about our new features that will enhance your experience with Bucket list!</p>
-                        <input type="text" id="email-input" name="email" placeholder="Enter email">
-                        <input type="password" id="password-input" name="password" placeholder="Enter password">
-                        <input type="checkbox" id="passcheckbox">
-                        <p id="viewpass">click to view password</p>
-                        <button type="submit" id="signupbutton">Sign up</button>
-
-                    </form>
-                </div>
-                <!-- event.preventdefault, graphical element: that chages the structure of the page -->
-            </aside>
 
             <footer class="footerbox">
                 <p>Last updated: 05/08/24</p>
