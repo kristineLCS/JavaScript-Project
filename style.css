@@ -45,7 +45,7 @@
  @media (min-width: 65em) {
     .nav-ul {
        display: flex;
-       flex-direction: row;
+       flex-direction: column;
        flex-wrap: nowrap;
        }
     #background {
@@ -93,33 +93,62 @@ button {
 }
 
 /* Navigation */
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home {
+    list-style-type: none;
+    /* margin-top: 50px;
+    margin-right: 50px; */
+    position: absolute;
+    top: 70px;
+    right: 140px;
+    /* display: flex;
+    justify-content: center;
+    align-self: center; */
+    /* flex-direction: column; */
+    color: rgb(0, 0, 0);
+}
 .list {
     list-style-type: none;
+    /* margin-top: 20px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: center; */
+    /* flex-direction: column; */
     /*display: flex;
     justify-content: flex-end;
     margin-top: 30px;
     margin-right: 50px; */
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 120px;
+    right: 150px;
     color: rgb(0, 0, 0);
 }
-.home {
+.contact {
     list-style-type: none;
     position: absolute;
-    top: 50px;
-    right: 120px;
+    top: 170px;
+    right: 132px;
     color: rgb(0, 0, 0);
 }
 .header {
     list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
     /* font-family: Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
     color: rgb(2, 2, 92); */
-    position: absolute;
+    /* position: absolute;
     top: 40px;
-    left: 50px; 
+    left: 50px;  */
 }
 nav a {
     text-decoration: none;
@@ -190,7 +219,7 @@ nav a:hover {
     justify-content: flex-start;
     transition: 0.5s;
 } */
-/* .sidebar{
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -207,7 +236,7 @@ nav a:hover {
     position: absolute;
     right: 20px;
     margin-top: 15px;
-    background-color: #edeef0d4;
+    background-color: #edeef000;
     width: 24px;
     height: 24px;
     border-radius: 10px;
@@ -221,11 +250,11 @@ nav a:hover {
 #hidesidebar img:hover {
     background-color: #dfdfdf;
     border-radius: 10px;
-} */
+}
 
-/* #showsidebar {
+#showsidebar {
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 40px;
     color: none;
     background-color: rgba(255, 255, 255, 0);
@@ -234,7 +263,7 @@ nav a:hover {
 #showsidebar button{
     list-style-type: none;
 }
-#sb-Plan-Button {
+/* #sb-Plan-Button {
     margin-left: 15px;
     margin-top: 60px;
     width: 215px;
@@ -500,7 +529,7 @@ nav a:hover {
     width: 400px;
     /* max-width: 540px;
     background: #fff; */
-    margin-left: 50px;
+    /* margin-left: 50px; */
     margin-top: 100px;
     /* padding: 40px 30px 70px;
     border-radius: 10px; */

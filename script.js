@@ -63,28 +63,28 @@
 
 
 // Show/Hide Sidebar
-// const showSidebar = document.getElementById('showsidebar');
-// const hideSidebar = document.getElementById('hidesidebar');
-// const mySideBar = document.getElementById('mysidebar');
-// const sideBar = document.querySelector('.sidebar');
+const showSidebar = document.getElementById('showsidebar');
+const hideSidebar = document.getElementById('hidesidebar');
+const mySideBar = document.getElementById('mysidebar');
+const sideBar = document.querySelector('.sidebar');
 // const newPlanBox = document.querySelector('.newplanbox');
-// const nav = document.querySelector('nav');
+const nav = document.querySelector('nav');
 
 
-// showSidebar.addEventListener('click', showSidebarBtn);
-// function showSidebarBtn() {
-//     mySideBar.style.width = '250px';
-//     newPlanBox.style.width = '250px';
-//     mySideBar.style.display = 'flex';
-// }
+showSidebar.addEventListener('click', showSidebarBtn);
+function showSidebarBtn() {
+    mySideBar.style.width = '250px';
+    // newPlanBox.style.width = '250px';
+    mySideBar.style.display = 'flex';
+}
 
 
-// hideSidebar.addEventListener('click', hideSidebarBtn);
-// function hideSidebarBtn() {
-//     mySideBar.style.width = '0';
-//     newPlanBox.style.width = '0';
-//     mySideBar.style.display = 'none';
-// }
+hideSidebar.addEventListener('click', hideSidebarBtn);
+function hideSidebarBtn() {
+    mySideBar.style.width = '0';
+    // newPlanBox.style.width = '0';
+    mySideBar.style.display = 'none';
+}
 
 
 
@@ -137,32 +137,6 @@
     
 // })
 
-
-
-// create new li and add that new li to sbplancontainer
-// sbPlanButton.addEventListener('click', sbPlanBtn);
-// function sbPlanBtn() {
-//     const sbPlanList = document.createElement('li');
-
-//     const titleBar = document.createElement('input');
-//     titleBar.type = 'text';
-//     titleBar.placeholder = 'Title...';
-//     titleBar.appendChild(sbPlanList);
-//     titleBar.appendChild(sbPlanContainer);
-
-//     const enterButton = document.createElement('button');
-//     enterButton.type = 'button';
-//     enterButton.innerHTML = 'URL{$'
-
-//     const editButton = document.createElement('button');
-//     const deleteButton = document.createElement('button');
-
-
-//     sbPlanList.appendChild(memoryPlans);
-//     sbPlanContainer.appendChild(sbPlanList);
-
-
-// }
 
 // adding new plans
 const inputBox = document.getElementById("input-box");
