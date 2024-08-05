@@ -198,8 +198,7 @@ nav a:visited {
 }
 
 .container {
-    /* max-width: 1000px; */
-    width: 60%;
+    width: 100%;
     position: relative;
     margin: auto;
     margin-top: 20px;
