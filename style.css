@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400..700&family=Covered+By+Your+Grace&family=Gochi+Hand&family=Nothing+You+Could+Do&display=swap');
+
+
 /* Start of Grid */
 @media only screen and (max-width: 600px) {
     /* CSS rules for screens with a maximum width of 600px */
@@ -535,6 +538,10 @@ nav a:hover {
     border-radius: 10px; */
 }
 .toPlan h2{
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+    /* font-style: normal; */
+    font-weight: bold;
     color: #002765;
     display: flex;
     justify-content: center;
@@ -641,6 +648,9 @@ nav a:hover {
     top: 550px; */
 }
 #gallery-time {
+    font-family: "Caveat", cursive;
+    font-size: 40px;
+    font-style: normal;
     display: flex;
     justify-content: center;
     margin-top: 80px;
