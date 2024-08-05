@@ -1,80 +1,14 @@
-// sidebar new plan button
-// const sbPlanButton = document.getElementById('sb-Plan-Button');
-// const memoryPlans = document.querySelector('.memoryplans')
-// const sbPlanContainer = document.getElementById('sb-plan-container');
-
-// sbPlanButton.addEventListener('click', sbPlanBtn);
-// function sbPlanBtn() {
-//     const buttonContainer = document.createElement('div');
-//     buttonContainer.className = 'btncontainer';
-
-//     const titleBar = document.createElement('input');
-//     titleBar.className = 'titlebar';
-//     titleBar.type = 'text';
-//     titleBar.placeholder = 'Title...';
-
-    // container for enter img button
-    // const enterContainer = document.createElement('div');
-    // enterContainer.className = 'entercontainer';
-    // const enterButton = document.createElement('img');
-    // enterButton.src = "enter-btn.png";
-    // enterButton.alt = 'enter button';
-    // enterButton.className = 'enterbutton';
-
-    // container for edit and delete button for better CSS styling
-    // const editDelete = document.createElement('div');
-    // editDelete.className = 'editdelete';
-
-    // container for edit img button
-    // const editContainer = document.createElement('div');
-    // editContainer.className = 'editcontainer';
-    // const editButton = document.createElement('img');
-    // editButton.src = "edit-title-btn.png";
-    // editButton.alt = 'edit button';
-    // editButton.className = 'editbutton';
-
-    // container for edit img button
-//     const deleteContainer = document.createElement('div');
-//     deleteContainer.className = 'deletecontainer';
-//     const deleteButton = document.createElement('img');
-//     deleteButton.src = "delete-btn.png";
-//     deleteButton.alt = 'delete button';
-//     deleteButton.className = 'deletebutton';
-
-//     enterContainer.appendChild(enterButton);
-//     editContainer.appendChild(editButton);
-//     deleteContainer.appendChild(deleteButton);
-
-//     buttonContainer.appendChild(titleBar);
-//     buttonContainer.appendChild(enterContainer);
-//     editDelete.appendChild(editContainer);
-//     editDelete.appendChild(deleteContainer);
-
-//     sbPlanContainer.appendChild(buttonContainer);
-//     sbPlanContainer.appendChild(editDelete);
-
-// }
-
-// save title placeholder
-// const enterBtn = document.getElementById('enterbtn');
-// const titleInput = document.getElementById('title-input');
-
-
-
-
 // Show/Hide Sidebar
 const showSidebar = document.getElementById('showsidebar');
 const hideSidebar = document.getElementById('hidesidebar');
 const mySideBar = document.getElementById('mysidebar');
 const sideBar = document.querySelector('.sidebar');
-// const newPlanBox = document.querySelector('.newplanbox');
 const nav = document.querySelector('nav');
 
 
 showSidebar.addEventListener('click', showSidebarBtn);
 function showSidebarBtn() {
     mySideBar.style.width = '250px';
-    // newPlanBox.style.width = '250px';
     mySideBar.style.display = 'flex';
 }
 
@@ -82,60 +16,9 @@ function showSidebarBtn() {
 hideSidebar.addEventListener('click', hideSidebarBtn);
 function hideSidebarBtn() {
     mySideBar.style.width = '0';
-    // newPlanBox.style.width = '0';
     mySideBar.style.display = 'none';
 }
 
-
-
-
-// enterButton.addEventListener('click', enterBtn);
-// function enterBtn() {
-// write code for what the button is used for
-// }
-
-// function sbButtons() {
-//     const enterButton = document.createElement('img');
-//     enterButton.src = "enter-btn.png";
-//     enterButton.alt = 'enter button';
-//     enterButton.className = 'enterbutton';
-
-//     const editButton = document.createElement('img');
-//     editButton.src = "edit-title-btn.png";
-//     editButton.alt = 'edit button';
-//     editButton.className = 'editbutton';
-
-
-//     sbPlanContainer.appendChild(enterButton);
-//     sbPlanContainer.appendChild(editButton);
-
-// }
-
-
-// const dropPlanArea = document.createElement('div');
-// dropPlanArea.className = 'drop-plan-area';
-// dropPlanArea.dataset.index = index;
-
-// const titleBar = document.createElement('input');
-// titleBar.className = 'titlebar';
-// titleBar.type = text;
-// titleBar.placeholder = 'Title...';
-
-// const enterButton = document.createElement('img');
-// img.src = 'enter-btn.png';
-// titleBar.appendChild(enterButton);
-
-// enterButton.addEventListener('click', enterBtn); 
-// function enterBtn() {
-
-// }
-
-// sbPlanContainer.appendChild(titleBar);
-
-// sbPlanButton.addEventListener('click', () => {
-//     const planIndex = document.querySelectorAll('.drop-plan-area').length;
-    
-// })
 
 
 // adding new plans
@@ -194,6 +77,7 @@ const container = document.getElementById('box-container');
 const addBoxButton = document.getElementById('add-box-button');
 
 const loadImages = () => {
+    // JSON.parse() is used to retrieve data back from local storage.
     const savedData = JSON.parse(localStorage.getItem('savedImages')) || [];
     savedData.forEach((data, index) => {
         createDropArea(index, data.imgSrc, data.hidePlaceholders);
@@ -201,6 +85,7 @@ const loadImages = () => {
 };
 
 const saveImages = () => {
+    // The Array.from() method returns an array from any object with a length property or from any iterable object.
     const data = Array.from(document.querySelectorAll('.drop-area')).map(dropArea => {
         const img = dropArea.querySelector('img');
         return {

@@ -18,8 +18,6 @@ function hideSidebarBtn() {
 }
 
 
-// CONTACT PAGE
-
 // Newsletter
 const signup = document.getElementById('signup');
 const email = document.getElementById('email-input');
